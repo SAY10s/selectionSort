@@ -1,16 +1,15 @@
-# This is a sample Python script.
+tab = [2, 1, 3, 7, 6, 9, 4, 2, 0]
+print(tab)
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+i = 0
+while i < len(tab) - 1:
+    minIndex = i
+    j = i + 1
+    while j < len(tab):
+        if tab[j] < tab[minIndex]:
+            minIndex = j
+        j += 1
+    tab[i], tab[minIndex] = tab[minIndex], tab[i]
+    i += 1
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(tab)
