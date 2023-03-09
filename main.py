@@ -1,15 +1,27 @@
-tab = [2, 1, 3, 7, 6, 9, 4, 2, 0]
-print(tab)
+import random
+
+# pierwsze
+# T = [2, 1, 3, 7, 6, 9, 4, 2, 0, ]
+
+#drugie
+# T = ["b", "a", "k"]
+
+#trzecie
+T = []
+for x in range(10):
+    T.append(random.randint(-10, 100))
+print(T)
+#koniec trzeciego
 
 i = 0
-while i < len(tab) - 1:
+while i < len(T) - 1:
     minIndex = i
     j = i + 1
-    while j < len(tab):
-        if tab[j] < tab[minIndex]:
+    while j < len(T):
+        if T[j] < T[minIndex]:
             minIndex = j
         j += 1
-    tab[i], tab[minIndex] = tab[minIndex], tab[i]
+    T[i], T[minIndex] = T[minIndex], T[i]
     i += 1
 
-print(tab)
+print(T)
